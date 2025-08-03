@@ -44,7 +44,7 @@ effect: "bounceOut",
         $("#Oval").attr("hidden", true);
         $("#SiriWave").attr("hidden", false);
         
-        eel.takecommand()()
+        eel.takeCommand()()
 
 
     }); 
