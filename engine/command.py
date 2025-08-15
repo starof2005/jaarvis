@@ -40,11 +40,16 @@ def takeCommand():
     return query.lower()
 
 @eel.expose
-def allCommands():
+def allCommands(message=1):
 
-    try:
+   
+    if message == 1:
         query = takeCommand()
         print(query)
+    else:
+        query = message
+
+    try:
 
         if "open" in query:
                 from engine.features import openCommand

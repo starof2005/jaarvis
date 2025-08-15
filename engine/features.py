@@ -108,16 +108,12 @@ def hotword():
             paud.terminate()
 
 
-
-
-
-
 # find contacts
 def findContact(query):
     
     words_to_remove = [ASSISTANT_NAME, 'make', 'a', 'to', 'phone', 'call', 'send', 'message', 'wahtsapp', 'video']
     query = remove_words(query, words_to_remove)
-
+ 
     try:
         query = query.strip().lower()
         cursor.execute("SELECT mobile_no FROM contacts WHERE LOWER(name) LIKE ? OR LOWER(name) LIKE ?", ('%' + query + '%', query + '%'))
